@@ -37,100 +37,140 @@ class WorldPageBackGround extends React.Component {
         className={styles.colorred}
         style={{ width: "100%", padding: 0 }}
       >
-        <Row style={{ width: "100%" }}>
+        <Row className={styles.marginSet}>
           <Col xs="4">
+            <h4
+              className={!this.state.continents ? `${styles.displayOff}` : ""}
+            >
+              Amérique du Nord
+            </h4>
+            <p
+              id={styles.marginClimatna}
+              className={!this.state.climat ? `${styles.displayOff}` : ""}
+            >
+              <b>Climat</b>: Continental
+            </p>
+            <p className={!this.state.population ? `${styles.displayOff}` : ""}>
+              <b>Population</b>: 579 Millions
+            </p>
             <img
               src={NA}
               alt="Amérique du Nord"
-              className="rounded"
+              className={styles.imag}
               width="100%"
             />
-            <p className={!this.state.continents ? `${styles.displayOff}` : ""}>
-              Amérique du Nord
-            </p>
-            <p className={!this.state.climat ? `${styles.displayOff}` : ""}>
-              Climat continental
-            </p>
-            <p className={!this.state.population ? `${styles.displayOff}` : ""}>
-              Population: 579 Millions
-            </p>
           </Col>
           <Col xs="4">
-            <img src={EU} alt="Europe" className="rounded" width="100%" />
-            <p className={!this.state.continents ? `${styles.displayOff}` : ""}>
+            <h4
+              className={!this.state.continents ? `${styles.displayOff}` : ""}
+            >
               Europe
-            </p>
-            <p className={!this.state.climat ? `${styles.displayOff}` : ""}>
-              Climat Océanique
+            </h4>
+            <p
+              id={styles.marginClimateu}
+              className={!this.state.climat ? `${styles.displayOff}` : ""}
+            >
+              <b>Climat</b>: Océanique
             </p>
             <p className={!this.state.population ? `${styles.displayOff}` : ""}>
-              Population: 741,4 Millions
+              <b>Population</b>: 741,4 Millions
             </p>
+            <img src={EU} alt="Europe" className={styles.imag} width="100%" />
           </Col>
-          <Col xs="4" className="text-left">
-            <img src={Asia} alt="Asia" className="rounded" width="100%" />
-            <p className={!this.state.continents ? `${styles.displayOff}` : ""}>
+          <Col xs="4">
+            <h4
+              className={!this.state.continents ? `${styles.displayOff}` : ""}
+            >
               Asie
-            </p>
-            <p className={!this.state.climat ? `${styles.displayOff}` : ""}>
-              Climat Continental
+            </h4>
+            <p
+              id={styles.marginClimat3}
+              className={!this.state.climat ? `${styles.displayOff}` : ""}
+            >
+              <b>Climat</b>: Continental
             </p>
             <p className={!this.state.population ? `${styles.displayOff}` : ""}>
-              Population: 4,463 Milliards
+              <b>Population</b>: 4,463 Milliards
             </p>
+            <img src={Asia} alt="Asia" className={styles.imag} width="100%" />
           </Col>
         </Row>
         <Row>
-          <Col xs="4" className="text-right">
+          <Col xs="1">
+            <Checkbox
+              handleOnClickCont={this.handleOnClickCont}
+              handleOnClickClim={this.handleOnClickClim}
+              handleOnClickPop={this.handleOnClickPop}
+            />
+          </Col>
+          <Col xs="3">
             <img
               src={SA}
               alt="South_America"
-              className="rounded"
-              height="300"
+              className={styles.imag}
+              height="200vw"
             />
-            <p className={!this.state.continents ? `${styles.displayOff}` : ""}>
+            <h4
+              className={!this.state.continents ? `${styles.displayOff}` : ""}
+            >
               Amérique du Sud
-            </p>
-            <p className={!this.state.climat ? `${styles.displayOff}` : ""}>
-              Climat Tropical
+            </h4>
+            <p
+              id={styles.marginClimat4}
+              className={!this.state.climat ? `${styles.displayOff}` : ""}
+            >
+              <b>Climat</b>: Tropical
             </p>
             <p className={!this.state.population ? `${styles.displayOff}` : ""}>
-              Population : 422,5 Millions
+              <b>Population</b>: 422,5 Millions
             </p>
           </Col>
-          <Col xs="5" className="text-left">
+          <Col xs="5">
             {" "}
-            <img src={Africa} alt="Africa" className="rounded" height="300" />
-            <p className={!this.state.continents ? `${styles.displayOff}` : ""}>
+            <img
+              src={Africa}
+              alt="Africa"
+              className={styles.imag}
+              height="200vw"
+            />
+            <h4
+              className={!this.state.continents ? `${styles.displayOff}` : ""}
+            >
               Afrique
-            </p>
-            <p className={!this.state.climat ? `${styles.displayOff}` : ""}>
-              Climat Tropical
+            </h4>
+            <p
+              id={styles.marginClimat5}
+              className={!this.state.climat ? `${styles.displayOff}` : ""}
+            >
+              <b>Climat</b>: Tropical
             </p>
             <p className={!this.state.population ? `${styles.displayOff}` : ""}>
-              Population : 1,216 Milliards
+              <b>Population</b>: 1,216 Milliards
             </p>
           </Col>
           <Col xs="3">
             {" "}
-            <img src={Oceania} alt="Oceania" className="rounded" height="300" />
-            <p className={!this.state.continents ? `${styles.displayOff}` : ""}>
+            <img
+              src={Oceania}
+              alt="Oceania"
+              className={styles.imag}
+              height="200vw"
+            />
+            <h4
+              className={!this.state.continents ? `${styles.displayOff}` : ""}
+            >
               Océanie
-            </p>
-            <p className={!this.state.climat ? `${styles.displayOff}` : ""}>
-              Climat Aride
+            </h4>
+            <p
+              id={styles.marginClimat6}
+              className={!this.state.climat ? `${styles.displayOff}` : ""}
+            >
+              <b>Climat</b>: Aride
             </p>
             <p className={!this.state.population ? `${styles.displayOff}` : ""}>
-              Population : 38 Millions
+              <b>Population</b>: 38 Millions
             </p>
           </Col>
-        </Row>
-        <Row>
-          <Checkbox
-            handleOnClickCont={this.handleOnClickCont}
-            handleOnClickClim={this.handleOnClickClim}
-            handleOnClickPop={this.handleOnClickPop}
-          />
         </Row>
       </Container>
     );
