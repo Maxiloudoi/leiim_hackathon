@@ -1,7 +1,3 @@
-.colorred {
-  color: green;
-}
-
 .displayOff {
-  display: none;
+  opacity: 0;
 }
