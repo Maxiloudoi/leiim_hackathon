@@ -1,0 +1,14 @@
+.flexcol {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexrow {
+  display: flex;
+  flex-direction: row;
+}
+
+.textmargin {
+  margin-bottom: 0px;
+  margin-left: 10px;
+}
