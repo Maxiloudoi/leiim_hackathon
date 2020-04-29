@@ -1,11 +1,12 @@
 import React from "react";
 import "./App.css";
-import WorldPage from "./components/WorldPage.jsx";
+
+import WorldPageBackGround from "./components/worldPage/WorldPageBackGround";
 
 function App() {
   return (
     <div className="App">
-      <WorldPage />
+      <WorldPageBackGround />
     </div>
   );
 }
