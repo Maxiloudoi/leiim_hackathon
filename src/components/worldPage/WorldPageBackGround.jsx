@@ -8,173 +8,115 @@ import SA from "./img/SA.png";
 import Africa from "./img/Africa.png";
 import Oceania from "./img/Oceania.png";
 import Checkbox from "../Checkbox.jsx";
+import Continent from "./Continent";
 
 class WorldPageBackGround extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      continents: false,
-      climat: false,
-      population: false,
-    };
-    this.handleOnClickCont = this.handleOnClickCont.bind(this);
-    this.handleOnClickClim = this.handleOnClickClim.bind(this);
-    this.handleOnClickPop = this.handleOnClickPop.bind(this);
-  }
-
-  handleOnClickCont() {
-    this.setState({ continents: !this.state.continents });
-  }
-  handleOnClickClim() {
-    this.setState({ climat: !this.state.climat });
-  }
-  handleOnClickPop() {
-    this.setState({ population: !this.state.population });
-  }
-  render() {
-    return (
-      <Container
-        className={styles.colorred}
-        style={{ width: "100%", padding: 0 }}
-      >
-        <Row className={styles.marginSet}>
-          <Col xs="4">
-            <h4
-              className={!this.state.continents ? `${styles.displayOff}` : ""}
+    constructor(props) {
+        super(props);
+        this.state = {
+            continents: false,
+            climat: false,
+            population: false,
+            codeContinent: "",
+            continentsArray: [
+                {
+                    code: "NA",
+                    name: "North America",
+                    pop: "579 Millions",
+                    climat: "continental",
+                    link: "/NA",
+                    img: NA,
+                },
+                {
+                    code: "EU",
+                    name: "Europe",
+                    pop: "741,4 Millions",
+                    climat: "océanique",
+                    link: "/EU",
+                    img: EU,
+                },
+                {
+                    code: "AS",
+                    name: "Asia",
+                    pop: "4,463 Milliard",
+                    climat: "continental",
+                    link: "/AS",
+                    img: Asia,
+                },
+                {
+                    code: "SA",
+                    name: "South America",
+                    pop: "422,5 Millions",
+                    climat: "tropical",
+                    link: "/SA",
+                    img: SA,
+                },
+                {
+                    code: "AF",
+                    name: "Africa",
+                    pop: "1,216 Milliard",
+                    climat: "tropical",
+                    link: "/AF",
+                    img: Africa,
+                },
+                {
+                    code: "OC",
+                    name: "Oceania",
+                    pop: "38 Millions",
+                    climat: "aride",
+                    link: "/OC",
+                    img: Oceania,
+                },
+            ],
+        };
+        this.handleOnClickCont = this.handleOnClickCont.bind(this);
+        this.handleOnClickClim = this.handleOnClickClim.bind(this);
+        this.handleOnClickPop = this.handleOnClickPop.bind(this);
+        this.handleClickNA = this.handleClickNA.bind(this);
+    }
+    handleClickNA() {
+        this.setState({ codeContinent: "NA" });
+        console.log(this.state.codeContinent);
+    }
+    handleOnClickCont() {
+        this.setState({ continents: !this.state.continents });
+    }
+    handleOnClickClim() {
+        this.setState({ climat: !this.state.climat });
+    }
+    handleOnClickPop() {
+        this.setState({ population: !this.state.population });
+    }
+    render() {
+        return (
+            <Container
+                className={styles.colorred}
+                style={{ width: "100%", padding: 0 }}
             >
-              Amérique du Nord
-            </h4>
-            <p
-              id={styles.marginClimatna}
-              className={!this.state.climat ? `${styles.displayOff}` : ""}
-            >
-              <b>Climat</b>: Continental
-            </p>
-            <p className={!this.state.population ? `${styles.displayOff}` : ""}>
-              <b>Population</b>: 579 Millions
-            </p>
-            <img
-              src={NA}
-              alt="Amérique du Nord"
-              className={styles.imag}
-              width="100%"
-            />
-          </Col>
-          <Col xs="4">
-            <h4
-              className={!this.state.continents ? `${styles.displayOff}` : ""}
-            >
-              Europe
-            </h4>
-            <p
-              id={styles.marginClimateu}
-              className={!this.state.climat ? `${styles.displayOff}` : ""}
-            >
-              <b>Climat</b>: Océanique
-            </p>
-            <p className={!this.state.population ? `${styles.displayOff}` : ""}>
-              <b>Population</b>: 741,4 Millions
-            </p>
-            <img src={EU} alt="Europe" className={styles.imag} width="100%" />
-          </Col>
-          <Col xs="4">
-            <h4
-              className={!this.state.continents ? `${styles.displayOff}` : ""}
-            >
-              Asie
-            </h4>
-            <p
-              id={styles.marginClimat3}
-              className={!this.state.climat ? `${styles.displayOff}` : ""}
-            >
-              <b>Climat</b>: Continental
-            </p>
-            <p className={!this.state.population ? `${styles.displayOff}` : ""}>
-              <b>Population</b>: 4,463 Milliards
-            </p>
-            <img src={Asia} alt="Asia" className={styles.imag} width="100%" />
-          </Col>
-        </Row>
-        <Row>
-          <Col xs="1">
-            <Checkbox
-              handleOnClickCont={this.handleOnClickCont}
-              handleOnClickClim={this.handleOnClickClim}
-              handleOnClickPop={this.handleOnClickPop}
-            />
-          </Col>
-          <Col xs="3">
-            <img
-              src={SA}
-              alt="South_America"
-              className={styles.imag}
-              height="200vw"
-            />
-            <h4
-              className={!this.state.continents ? `${styles.displayOff}` : ""}
-            >
-              Amérique du Sud
-            </h4>
-            <p
-              id={styles.marginClimat4}
-              className={!this.state.climat ? `${styles.displayOff}` : ""}
-            >
-              <b>Climat</b>: Tropical
-            </p>
-            <p className={!this.state.population ? `${styles.displayOff}` : ""}>
-              <b>Population</b>: 422,5 Millions
-            </p>
-          </Col>
-          <Col xs="5">
-            {" "}
-            <img
-              src={Africa}
-              alt="Africa"
-              className={styles.imag}
-              height="200vw"
-            />
-            <h4
-              className={!this.state.continents ? `${styles.displayOff}` : ""}
-            >
-              Afrique
-            </h4>
-            <p
-              id={styles.marginClimat5}
-              className={!this.state.climat ? `${styles.displayOff}` : ""}
-            >
-              <b>Climat</b>: Tropical
-            </p>
-            <p className={!this.state.population ? `${styles.displayOff}` : ""}>
-              <b>Population</b>: 1,216 Milliards
-            </p>
-          </Col>
-          <Col xs="3">
-            {" "}
-            <img
-              src={Oceania}
-              alt="Oceania"
-              className={styles.imag}
-              height="200vw"
-            />
-            <h4
-              className={!this.state.continents ? `${styles.displayOff}` : ""}
-            >
-              Océanie
-            </h4>
-            <p
-              id={styles.marginClimat6}
-              className={!this.state.climat ? `${styles.displayOff}` : ""}
-            >
-              <b>Climat</b>: Aride
-            </p>
-            <p className={!this.state.population ? `${styles.displayOff}` : ""}>
-              <b>Population</b>: 38 Millions
-            </p>
-          </Col>
-        </Row>
-      </Container>
-    );
-  }
+                <Row>
+                    <Col xs="1">
+                        <Checkbox
+                            handleOnClickCont={this.handleOnClickCont}
+                            handleOnClickClim={this.handleOnClickClim}
+                            handleOnClickPop={this.handleOnClickPop}
+                        />
+                    </Col>
+                </Row>
+                <Row className={styles.marginSet}>
+                    {this.state.continentsArray.map((continent) => {
+                        return (
+                            <Continent
+                                {...continent}
+                                showClimat={this.state.climat}
+                                showName={this.state.continents}
+                                showPop={this.state.population}
+                            />
+                        );
+                    })}
+                </Row>
+            </Container>
+        );
+    }
 }
 
 export default WorldPageBackGround;

@@ -1,24 +1,20 @@
 import React from "react";
-import {BrowserRouter as Router, Link, Switch, Route} from "react-router-dom";
+import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
 import CityInfo from "./Cities/CityInfo";
-import Continent from "./continent/Continent";
+import ContinentPage from "./continent/ContinentPage";
+import WorldPageBackGround from "./worldPage/WorldPageBackGround";
 
-class RouterPage extends React.Component{
+class Router extends React.Component {
     render() {
-    return(
-        <Router>
-            <div>
-                <Link/>
-                <Link/>
-                <Link/>
-            </div>
-            <Switch>
-                <Route exact path="/"/>
-                <Route path="/:codeContinent" component={Continent}/>
-                <Route path="/continent/cities" component={CityInfo} />
-            </Switch>
-        </Router>
-        )
+        return (
+            <BrowserRouter>
+                <Switch>
+                    <Route exact path="/" component={WorldPageBackGround} />
+                    <Route path="/:codeContinent/:id" component={CityInfo} />
+                    <Route path="/:codeContinent" component={ContinentPage} />
+                </Switch>
+            </BrowserRouter>
+        );
     }
 }
-export default RouterPage;
+export default Router;
