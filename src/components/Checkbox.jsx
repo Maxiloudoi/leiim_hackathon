@@ -6,6 +6,9 @@ class Checkbox extends React.Component {
     return (
       <div className={styles.flexcol}>
         <div className={styles.flexrow}>
+          <h5 className={styles.titlecolor}>Map Info</h5>
+        </div>
+        <div className={styles.flexrow}>
           <input type="checkbox" onClick={this.props.handleOnClickCont} />
           <p className={styles.textmargin}>Continents</p>
         </div>
