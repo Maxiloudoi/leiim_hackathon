@@ -25,9 +25,7 @@ class Asia extends React.Component {
   render() {
     return (
       <div>
-        {/* <img
-          className={this.displayImg !== codeContinent ? "displayImgOff" : ""}
-        /> */}
+        {" "}
         {this.state.city.map((city) => {
           return (
             <Router>
