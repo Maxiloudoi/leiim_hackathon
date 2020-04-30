@@ -6,7 +6,7 @@ class CityInfo extends React.Component {
   constructor({ id }) {
     super({ id });
     this.state = {
-      city: [],
+      cityDetail: [],
     };
     this.getCity = this.getCity.bind(this);
   }
@@ -25,7 +25,13 @@ class CityInfo extends React.Component {
   render() {
     return (
       <div>
-        <CardCity/>
+        <CardCity
+        id={this.state.cityDetail.id}
+          image={this.state.cityDetail.image.current.preview}
+          title={this.state.cityDetail.title}
+          wiki={this.state.cityDetail.location.wikipedia}
+          player={this.state.cityDetail.player.lifetime.embed}
+        />
       </div>
     );
   }

@@ -9,16 +9,18 @@ import {
   Col,
 } from "reactstrap";
 
-function CardCity({ id, title }) {
+function CardCity({id, image, title, wiki, player}) {
   return (
     <div>
       <Container>
         <Row>
           <Col lg="4">
             <Card>
-              <CardImg top width="100%" src={id} alt={title} />
+              <CardImg top width="100%" src={image} alt={title} />
               <CardBody>
                 <CardTitle>{title}</CardTitle>
+                <p>{wiki}</p>
+                <iframe id={id} src={player} title={title}></iframe>
               </CardBody>
             </Card>
           </Col>

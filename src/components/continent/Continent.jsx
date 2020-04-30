@@ -6,7 +6,7 @@ class Continent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      city: [],
+      cities: [],
     };
   }
 
@@ -18,8 +18,7 @@ class Continent extends React.Component {
     const url = `https://api.windy.com/api/webcams/v2/list/continent=${codeContinent}?key=JL07MzvXKKw4PytFeBQOclm38TMYggLM`;
     axios.get(url).then((res) => {
       const data = res.data;
-      this.setState({ city: data.result.webcams });
-      console.log(data);
+      this.setState({ conties: data.result.webcams });
     });
   }
   render() {
@@ -28,7 +27,7 @@ class Continent extends React.Component {
         {/* <img
           className={this.displayImg !== codeContinent ? "displayImgOff" : ""}
         /> */}
-        {this.state.city.map((city) => {
+        {this.state.cities.map((city) => {
           return (
             <Router>
               <Link to="/continent/:id">

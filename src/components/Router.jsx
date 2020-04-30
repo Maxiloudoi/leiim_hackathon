@@ -8,12 +8,12 @@ class RouterPage extends React.Component{
     return(
         <Router>
             <div>
-            <Link/>
-            <Link/>
-            <Link/>
+                <Link/>
+                <Link/>
+                <Link/>
             </div>
             <Switch>
-                <Route exact path="/" component={WorldPage} />
+                <Route exact path="/"/>
                 <Route path="/:codeContinent" component={Continent}/>
                 <Route path="/continent/cities" component={CityInfo} />
             </Switch>
