@@ -1,9 +1,12 @@
 .displayOff {
   opacity: 0;
 }
+.checkboxMargin {
+  margin-top: 10px;
+}
 
 .marginSet {
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 .imag {
