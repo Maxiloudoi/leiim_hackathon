@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import Continent from "./components/Continent";
+import RouterPage from "./components/Router"
 
 function App() {
   return (
     <div className="App">
-      <Continent />
+      <RouterPage/>
     </div>
   );
 }

@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import { Link, BrowserRouter as Router } from "react-router-dom";
 
-class Continent extends React.Component {
+class Oceania extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -15,7 +15,7 @@ class Continent extends React.Component {
   }
 
   getContinent() {
-    const url = `https://api.windy.com/api/webcams/v2/list/continent=NA?key=JL07MzvXKKw4PytFeBQOclm38TMYggLM`;
+    const url = `https://api.windy.com/api/webcams/v2/list/continent=OC?key=JL07MzvXKKw4PytFeBQOclm38TMYggLM`;
     axios.get(url).then((res) => {
       const data = res.data;
       this.setState({ city: data.result.webcams });
@@ -42,4 +42,4 @@ class Continent extends React.Component {
   }
 }
 
-export default Continent;
+export default Oceania;

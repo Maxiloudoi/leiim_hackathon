@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import CardCity from "./CardCity";
+import CardCity from "./Cities/CardCity";
 
 class CityInfo extends React.Component {
   constructor({ id }) {
@@ -25,7 +25,7 @@ class CityInfo extends React.Component {
   render() {
     return (
       <div>
-        <img></img>
+        <CardCity/>
       </div>
     );
   }
