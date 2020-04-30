@@ -1,12 +1,11 @@
 import React from "react";
 import "./App.css";
-
-import WorldPageBackGround from "./components/worldPage/WorldPageBackGround";
+import Europe from './components/continent/Europe'
 
 function App() {
   return (
     <div className="App">
-      <WorldPageBackGround />
+      <Europe/>
     </div>
   );
 }
