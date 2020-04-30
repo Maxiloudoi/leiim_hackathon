@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import RouterPage from "./components/Router"
+import Europe from './components/continent/Europe'
 
 function App() {
   return (
     <div className="App">
-      <RouterPage/>
+      <Europe/>
     </div>
   );
 }

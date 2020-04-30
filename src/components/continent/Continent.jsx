@@ -7,18 +7,17 @@ class Continent extends React.Component {
     super(props);
     this.state = {
       cities: [],
+      codeContinent: "",
     };
   }
-
   componentDidMount() {
     this.getContinent();
   }
-
   getContinent() {
     const url = `https://api.windy.com/api/webcams/v2/list/continent=${codeContinent}?key=JL07MzvXKKw4PytFeBQOclm38TMYggLM`;
     axios.get(url).then((res) => {
       const data = res.data;
-      this.setState({ conties: data.result.webcams });
+      this.setState({ cities: data.result.webcams });
     });
   }
   render() {

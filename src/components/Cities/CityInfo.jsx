@@ -7,6 +7,7 @@ class CityInfo extends React.Component {
     super({ id });
     this.state = {
       cityDetail: [],
+      id: "",
     };
     this.getCity = this.getCity.bind(this);
   }
