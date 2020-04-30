@@ -1,0 +1,36 @@
+.displayOff {
+  opacity: 0;
+}
+
+.marginSet {
+  margin-top: 50px;
+}
+
+.imag {
+  filter: brightness(50%);
+  margin-bottom: 20px;
+}
+
+.imag:hover {
+  transition: 0.5s;
+  filter: brightness(100%);
+  scale: 110%;
+}
+#marginClimatna {
+  margin-bottom: 0px;
+}
+#marginClimateu {
+  margin-bottom: 0px;
+}
+#marginClimat3 {
+  margin-bottom: 0px;
+}
+#marginClimat4 {
+  margin-bottom: 0px;
+}
+#marginClimat5 {
+  margin-bottom: 0px;
+}
+#marginClimat6 {
+  margin-bottom: 0px;
+}
